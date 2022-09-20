@@ -17,8 +17,8 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    height: 75vh;
-    width: 45vh;
+    height: 66vh;
+    width: 40vh;
     box-shadow: 0 0 15px #000000;
     color: white;
     overflow: hidden;
@@ -31,6 +31,7 @@ body {
 .card-image {
     text-align: center;
     position: relative;
+    padding: 2em;
 }
 
 .view-icon {
@@ -39,6 +40,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    /* background-color: hsl(178, 100%, 50%, 0.4);; */
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
@@ -47,7 +49,6 @@ body {
 
 .card-image:hover img {
     opacity: 0.3;
-    background-color: hsl(178, 100%, 50%);
     cursor: pointer;
 }
 
@@ -97,11 +98,10 @@ body {
     cursor: pointer;
 }
 
-img {
+.eth-img {
     height: 100%;
     width: 100%;
     border-radius: 10px;
-
 }
 
 .icon {
