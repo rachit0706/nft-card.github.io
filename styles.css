@@ -1,21 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 
-html {
-    height: 100%;
-}
-
-body {
-    height: 100%;
-    background-color: hsl(217, 54%, 11%);
-    margin: 0;
+* {
     padding: 0;
-    overflow: hidden;
-    font-family: Outfit, 'San-serif';
+    margin: 0;
+    box-sizing: border-box;
     font-size: 18px;
 }
 
+body {
+    min-height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', 'San-serif';
+}
+
 main {
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,74 +22,53 @@ main {
 }
 
 .card {
-    margin-top: 3rem;
+    margin: 1rem;
     color: hsl(0, 0%, 100%);
-    width: 22%;
-    height: auto;
-    border-radius: 20px;
+    max-width: 18rem;
+    border-radius: 1rem;
     background-color: hsl(216, 50%, 16%);
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
     box-shadow: 12px 7px 20px 6px rgb(57 75 84 / 8%);
-}
-
-@media screen and (min-width: 375px) {
-    .card {
-        width: 85%;
-    }
-}
-
-@media screen and (min-width: 480px) {
-    .card {
-        width: 60%;
-        /* min-height: 50%; */
-    }
-}
-
-
-@media screen and (min-width: 768px) {
-    .card {
-        width: 40%;
-        /* min-height: 50%; */
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .card {
-        width: 22%;
-        /* min-height: 50%; */
-    }
+    padding: .4rem;
+    
 }
 
 .card-body {
     width: 100%;
     margin-top: -1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.2rem;
+    padding: 0 1rem;
 }
 
 .card-image-top {
     position: relative;
     max-width: 100%;
     height: 48%;
-    padding: 1rem;
-    /* padding: 1rem 0; */
-    /* text-align: center; */
+    padding: .5rem;
+    overflow: hidden;
 }
 
 .eth-img {
     height: 100%;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 1rem;
 }
 
 .img-overlay {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
-    bottom: 1rem;
-    right: 1rem;
-    border-radius: 20px;
-    height: 88%;
-    width: 90%;
+    top: .5rem;
+    left: .5rem;
+    bottom: .5rem;
+    right: .5rem;
+    border-radius: 1rem;
+    height: 95%;
+    width: 95%;
     background-color:  rgba(0, 255, 247, 0.4);
     background-image: url('./images/icon-view.svg');
     background-repeat: no-repeat;
@@ -100,26 +78,19 @@ main {
 }
 
 .img-overlay:hover {
-    opacity: 1;
+    opacity: 0.8;
     cursor: pointer;
 }
 
 .card-title {
     font-size: 1.5rem;
-    margin-left: 1rem;
     transition: all ease-in 0.5s;
 }
 
-.description {
-    margin: -0.2rem 0 0.6rem 0;
-    padding-left: 1rem;
-}
-
 .eth-section {
-    display: flex;
+    width: 100%;
+    display: flex; 
     justify-content: space-between;
-    padding: 0 1rem 0 1rem;
-    margin-bottom: 0.5rem;
 }
 
 .attribution {
@@ -131,15 +102,16 @@ main {
 }
 
 .credit {
-    margin-left: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: -0.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    /* margin-bottom: -2.5rem; */
 }
 
 .line {
-    width: 80%;
-    display: inline-block;
-    margin-left: 2rem;
+    width: 100%;
+    display: block;
     border: 1px solid hsl(215, 32%, 27%);
 }
 
@@ -151,8 +123,6 @@ main {
     height: 1.5rem;
     width: 1.5rem;
     border-radius: 50%;
-    /* margin-bottom: ; */
-    margin: 0 1rem -0.5rem 1rem; 
 }
 
 .author {
